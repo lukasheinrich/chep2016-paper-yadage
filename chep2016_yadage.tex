@@ -248,10 +248,13 @@ As noted, LHC experiments already engage in re-interpretation campaigns. However
 
 The prototype backend consists of a `control-center' web-service that is accessible using VO-filtered CERN Single-Sign-On. This web-service displays incoming requests and allows operators to launch a re-execution of an analysis based on the RECAST request. The actual workflow execution is then handed off to a distributed system. Here, yadage and packtivity are heavily used to both define workflows and drive their execution. In the course of this development, a packtivity backend has been implemented that allows the scheduling of HEP container workloads on a Kubernetes Cluster deployed on the CERN OpenStack infrastructure using OpenStack Magnum. The integration with cloud-native tools allows for convenient scaling characteristics and a highly distributed workflow execution that may be monitored in real-time using the web-interface of the `control-center'.
 
-
 \section{Summary}
 
 We have presented a framework to define parametrized workflows in order to preserve high-energy physics analyses in a format that allows collaboration members to re-execute the original analysis in the context of new physics models. The framework defines a set of portable JSON schemas that describe both the individual processing steps and and workflow logic to orchestrate multiple steps. We also presented language-agnostic algorithms to re-execute analyses based on these descriptions. Furthermore, reference implementations of these algorithms distributed as python-based packages (\verb+packtivity+ and \verb+yadage+) were presented. Workflows definitions and the reference implementation have been used in the past for re-interpretation campaigns within the ATLAS collaboration and are deeply integrated in the CERN Analysis Preservation Portal and RECAST projects. 
+
+\section{Acknowledgements}
+
+Cranmer and Heinrich are both supported through NSF ACI-1450310, additionally Cranmer is supported by PHY-1505463.
 
 \section*{References}
 \bibliography{chep2016_yadage}
